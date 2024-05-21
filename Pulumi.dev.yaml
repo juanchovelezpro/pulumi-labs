@@ -1,0 +1,43 @@
+encryptionsalt: v1:lIhcc4bOp0s=:v1:3qxEenpbe3k6yNX4:tSlCELorsbgVyDI769c/ibNCQOmU8A==
+config:
+  aws-native:region: us-east-1
+  vpc: { "name": "pulumi-labs", "cidrBlock": "10.0.0.0/22" }
+  private-subnets:
+    [
+      {
+        "name": "private-subnet-1",
+        "az": "us-east-1a",
+        "cidrBlock": "10.0.0.0/24",
+      },
+      {
+        "name": "private-subnet-2",
+        "az": "us-east-1b",
+        "cidrBlock": "10.0.1.0/24",
+      },
+    ]
+  public-subnets:
+    [
+      {
+        "name": "public-subnet-1",
+        "az": "us-east-1a",
+        "cidrBlock": "10.0.2.0/25",
+      },
+      {
+        "name": "public-subnet-2",
+        "az": "us-east-1b",
+        "cidrBlock": "10.0.2.128/25",
+      },
+    ]
+  data-subnets:
+    [
+      {
+        "name": "data-subnet-1",
+        "az": "us-east-1a",
+        "cidrBlock": "10.0.3.0/28",
+      },
+      {
+        "name": "data-subnet-2",
+        "az": "us-east-1b",
+        "cidrBlock": "10.0.3.16/28",
+      }
+    ]

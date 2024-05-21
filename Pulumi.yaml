@@ -1,0 +1,10 @@
+name: pulumi-labs
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Pulumi Labs
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-native-python
